@@ -36,13 +36,13 @@ if ! wp core is-installed --allow-root --path=/var/www; then
         --title="Inception WP" \
         --admin_user=${WP_ADMIN_USER} \
         --admin_password=${WP_ADMIN_PASS} \
-        --admin_email=admin@vbarsegh.42.fr \
+        --admin_email=${WP_ADMIN_EMAIL} \
         --skip-email \
         --path=/var/www \
         --allow-root
 
 	# Create additional WordPress user
-	wp user create ${WP_USER} mywpuser@gmail.com \
+	wp user create ${WP_USER} ${WP_USER_EMAIL} \
     		--user_pass=${WP_USER_PASS} \
     		--role=author \
     		--path=/var/www \

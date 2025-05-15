@@ -50,7 +50,8 @@ services:
         WP_ADMIN_USER: ${WP_ADMIN_USER}
         WP_USER: ${WP_USER}
         WP_USER_PASS: ${WP_USER_PASS}
-
+        WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
+        WP_USER_EMAIL: ${WP_USER_EMAIL}
     container_name: wordpress
     ports:
       - "9000:9000"
